@@ -12,6 +12,7 @@ var currentMP;
 var maxMP;
 
 var inventoryList = [];
+var inventoryText = "";
 
 // An object that represents an empty equipment slot
 var empty = {

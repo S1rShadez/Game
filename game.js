@@ -147,13 +147,21 @@ window.onload = function gameOn(){
     
     
     function inventory(){
-        midContent.innerHTML = 
-            "<b>Inventory</b>" +
-            "<p>" + race.starterWeapon.name + "</p>" +
-            race.starterHat.name +
-            race.starterShirt.name +
-            race.starterPants.name +
-            race.starterBoots.name;
+        inventoryText = "<b>Inventory!</b>";
+        for(x = 0; x <= inventoryList.length - 1; x++){
+            console.log(inventoryList[x].name);
+            if(inventoryList[x].name === "Empty"){
+                console.log("Tihi, easteregg <3")
+            }
+            else if(inventoryList[x].name === undefined){
+                console.log("Tihi, easteregg <3")
+            }
+            else{
+               inventoryText += "<p>" + inventoryList[x].name + "</p>"; 
+            }
+               
+            }
+        midContent.innerHTML = inventoryText;
     };
     
     
