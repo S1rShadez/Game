@@ -111,7 +111,9 @@ window.onload = function gameOn(){
     currentShirt = race.starterShirt;
     currentPants = race.starterPants;
     currentBoots = race.starterBoots;
-
+    inventoryList.push(currentWeapon, currentHat, currentShirt, currentPants, currentBoots);
+    
+    
     //Sets HP and MP based on race
     maxHP = race.HPBase + level;
     maxMP = race.MPBase + level;
