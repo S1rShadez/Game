@@ -225,8 +225,6 @@ var berserkMP = 25;
 */
     
 
-
-    
     //Races
 var race;
 
@@ -274,3 +272,6 @@ var halfling = {
     abilities: damageUp
 };
 
+// Actions for the centre of the screen
+
+midContent.innerHTML = null;
