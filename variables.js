@@ -188,6 +188,10 @@ var clothBoots = {
 
     //Abilities
 
+var selfHeal = {
+    name: "Self heal",
+    MPCost: 25
+};
 /*
 //Human
 var selfHeal =  4 + level;
@@ -195,16 +199,26 @@ var selfHealMP = 25;
 */
 var fireball = {
     name: "fireball",
-    MPcost: 25
-}
+    MPCost: 25
+};
 /*Elf
 var fireball = currentWeapon.DMG + 4 + level;
 var fireballMP = 25;
-
+*/
+var damageUp = {
+    name: "Damage up",
+    MPCost: 25
+};
+/*
 //Halfling
 var damageUp = currentWeapon.DMG + 1 + level;
 var damageUpMP = 25;
-
+*/
+var berserk = {
+    name: "Berserk",
+    MPCost: 25
+};
+/*
 //Orc
 var berserk = currentWeapon.DMG * 2 + level;
 var berserkMP = 25;
@@ -224,7 +238,7 @@ var human = {
     starterShirt: woolenShirt,
     starterPants: woolenPants,
     starterBoots: leatherBoots,
-   // abilities: selfHeal
+    abilities: selfHeal
 };
 
 var orc = {
@@ -235,7 +249,7 @@ var orc = {
     starterShirt: chainmailShirt,
     starterPants: wornLeatherPants,
     starterBoots: leatherBoots,
-   // abilities: berserk
+    abilities: berserk
 };
 
 var elf = {
@@ -257,6 +271,6 @@ var halfling = {
     starterShirt: darkLeatherShirt,
     starterPants: darkLeatherPants,
     starterBoots: leatherBoots,
-   // abilities: damageUp
+    abilities: damageUp
 };
 
