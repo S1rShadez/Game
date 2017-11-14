@@ -141,7 +141,24 @@ window.onload = function gameOn(){
     MP.innerHTML = "MP: " + currentMP + "/" + maxMP;
 
     // Actions for the centre of the screen
-    midContent.innerHTML = "<button onclick = \"inventory()\">Inventory</button>";
+    
+    
+    
+    function inventory(){
+        midContent.innerHTML = 
+            "<b>Inventory</b>" +
+            "<p>" + race.starterWeapon.name + "</p>" +
+            race.starterHat.name +
+            race.starterShirt.name +
+            race.starterPants.name +
+            race.starterBoots.name;
+    };
+    
+    
+    
+    midContent.innerHTML = "<button id=\"openInventory\">Inventory</button>";
+    
+    openInventory.addEventListener("click", inventory);
 
     
 
