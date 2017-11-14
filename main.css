@@ -58,4 +58,8 @@ h1{
     grid-row: 1 / 5;
     grid-column: 2 / 4;
     background-color: pink;
+    text-align: center;
+    font-size: 130%;
+    margin-right: 5%;
+    margin-left: 5%;
 }
