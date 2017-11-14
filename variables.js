@@ -14,8 +14,8 @@ var maxMP;
 
 // An object that represents an empty equipment slot
 var empty = {
-    name: "empty",
-    type: "empty",
+    name: "Empty",
+    type: "Empty",
     DMG: 0,
     DEF: 0
 };
