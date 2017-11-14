@@ -271,7 +271,3 @@ var halfling = {
     starterBoots: leatherBoots,
     abilities: damageUp
 };
-
-// Actions for the centre of the screen
-
-midContent.innerHTML = null;
