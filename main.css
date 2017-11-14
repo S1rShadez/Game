@@ -30,7 +30,7 @@ h1{
 
 }
 
-#inventory{
+#equipment{
     grid-column: 1 / 1;
     grid-row: 2 / 3;
     margin-left: 5%;
@@ -39,7 +39,7 @@ h1{
     font-size: 130%;
 }
 
-#inventory p, #abilities p{
+#equipment p, #abilities p{
     background-color: lightgrey;
 
 

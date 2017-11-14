@@ -123,9 +123,9 @@ window.onload = function gameOn(){
     Kjønn.innerHTML = "Sex: " + førsteBokstavStor(kjønn) + " | ";
     Rase.innerHTML = "Race: " + førsteBokstavStor(rase);
 
-    //Displays inventory
-    inventory.innerHTML =  
-        "<b>Inventory</b>" + 
+    //Displays equipment
+    equipment.innerHTML =  
+        "<b>Equipment</b>" + 
         "<p>" + currentHat.name + "</p>" + 
         "<p>" + currentShirt.name + "</p>" + 
         "<p>" + currentWeapon.name + "/dmg: " + currentWeapon.DMG + "</p>" + 
@@ -139,12 +139,7 @@ window.onload = function gameOn(){
     MP.innerHTML = "MP: " + currentMP + "/" + maxMP;
 
     // Actions for the centre of the screen
-    midContent.innerHTML = "<header><b>Filler text</b></header>" +
-        "<p>More filler text</p>" +
-        "<br><br><br><br><br><br>" +
-        "<p>Even more filler text</p>" +
-        "<br><br><br><br><br><br><br><br><br><br><br><br>" +
-        "<p><b>ALL THE FILLER TEXT!!!!!!!!</b></p>";
+    midContent.innerHTML = null;
     
     
 }  
