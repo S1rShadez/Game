@@ -85,57 +85,62 @@ window.onload = function gameOn(){
     alert("You have chosen: \"" + navn +"\" as your name, " + "\"" + førsteBokstavStor(kjønn) + "\" as your gender and \"" + førsteBokstavStor(rase) + "\" as your race! Now let the adventure begin!");
 
 
-        //figures out your race 
-                if(rase === "human"){
-                    race = human;
+    //figures out your race 
+    if(rase === "human"){
+        race = human;
 
-                }
-                else if(rase === "orc"){
-                    race = orc;
-                }
-                else if(rase === "elf"){
-                    race = elf;
+    }
+    else if(rase === "orc"){
+        race = orc;
+    }
+    else if(rase === "elf"){
+        race = elf;
 
-                }
-                else if(rase === "halfling"){
-                    race = halfling;
+    }
+    else if(rase === "halfling"){
+        race = halfling;
 
-                }
-                else {
-                    alert("This is never supposed to happen. What did you do?")
-                }
-                
-                //Sets starter equipment based on race
-                currentWeapon = race.starterWeapon;
-                currentHat = race.starterHat;
-                currentShirt = race.starterShirt;
-                currentPants = race.starterPants;
-                currentBoots = race.starterBoots;
-                
-                //Sets HP and MP based on race
-                maxHP = race.HPBase + level;
-                maxMP = race.MPBase + level;
-                currentHP = maxHP;
-                currentMP = maxMP;
-                
-                //Displays name, sex and race
-                Navn.innerHTML = "Name: " + navn + " | ";
-                Kjønn.innerHTML = "Sex: " + førsteBokstavStor(kjønn) + " | ";
-                Rase.innerHTML = "Race: " + førsteBokstavStor(rase);
-                
-                //Displays inventory
-                inventory.innerHTML =  
-                    "<b>Inventory</b>" + 
-                    "<p>" + currentHat.name + "</p>" + 
-                    "<p>" + currentShirt.name + "</p>" + 
-                    "<p>" + currentWeapon.name + "/dmg: " + currentWeapon.DMG + "</p>" + 
-                    "<p>" + currentPants.name + "</p>" + 
-                    "<p>" + currentBoots.name +"</p>";
-                abilities.innerHTML = "<p>" + race.abilities.name + "</p>" +
-                "<p> MPcost: " + race.abilities.MPCost + "</p>";
-                
-                //Displays HP and MP
-                HP.innerHTML = "HP: " + currentHP + "/" + maxHP + " | ";
-                MP.innerHTML = "MP: " + currentMP + "/" + maxMP;
-                
-            }
+    }
+    else {
+        alert("This is never supposed to happen. What did you do?")
+    }
+
+    //Sets starter equipment based on race
+    currentWeapon = race.starterWeapon;
+    currentHat = race.starterHat;
+    currentShirt = race.starterShirt;
+    currentPants = race.starterPants;
+    currentBoots = race.starterBoots;
+
+    //Sets HP and MP based on race
+    maxHP = race.HPBase + level;
+    maxMP = race.MPBase + level;
+    currentHP = maxHP;
+    currentMP = maxMP;
+
+    //Displays name, sex and race
+    Navn.innerHTML = "Name: " + navn + " | ";
+    Kjønn.innerHTML = "Sex: " + førsteBokstavStor(kjønn) + " | ";
+    Rase.innerHTML = "Race: " + førsteBokstavStor(rase);
+
+    //Displays inventory
+    inventory.innerHTML =  
+        "<b>Inventory</b>" + 
+        "<p>" + currentHat.name + "</p>" + 
+        "<p>" + currentShirt.name + "</p>" + 
+        "<p>" + currentWeapon.name + "/dmg: " + currentWeapon.DMG + "</p>" + 
+        "<p>" + currentPants.name + "</p>" + 
+        "<p>" + currentBoots.name +"</p>";
+    abilities.innerHTML = "<p>" + race.abilities.name + "</p>" +
+        "<p> MPcost: " + race.abilities.MPCost + "</p>";
+
+    //Displays HP and MP
+    HP.innerHTML = "HP: " + currentHP + "/" + maxHP + " | ";
+    MP.innerHTML = "MP: " + currentMP + "/" + maxMP;
+
+    // Actions for the centre of the screen
+
+    midContent.innerHTML = null;
+    
+    
+}  
