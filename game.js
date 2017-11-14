@@ -131,7 +131,9 @@ window.onload = function gameOn(){
         "<p>" + currentWeapon.name + "/dmg: " + currentWeapon.DMG + "</p>" + 
         "<p>" + currentPants.name + "</p>" + 
         "<p>" + currentBoots.name +"</p>";
-    abilities.innerHTML = "<p>" + race.abilities.name + "</p>" +
+    abilities.innerHTML = 
+        "<b>Abilities</b>" +
+        "<p>" + race.abilities.name + "</p>" +
         "<p> MPcost: " + race.abilities.MPCost + "</p>";
 
     //Displays HP and MP
@@ -140,6 +142,6 @@ window.onload = function gameOn(){
 
     // Actions for the centre of the screen
     midContent.innerHTML = null;
-    
-    
+
+
 }  
