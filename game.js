@@ -139,8 +139,12 @@ window.onload = function gameOn(){
     MP.innerHTML = "MP: " + currentMP + "/" + maxMP;
 
     // Actions for the centre of the screen
-
-    midContent.innerHTML = null;
+    midContent.innerHTML = "<header><b>Filler text</b></header>" +
+        "<p>More filler text</p>" +
+        "<br><br><br><br><br><br>" +
+        "<p>Even more filler text</p>" +
+        "<br><br><br><br><br><br><br><br><br><br><br><br>" +
+        "<p><b>ALL THE FILLER TEXT!!!!!!!!</b></p>";
     
     
 }  
