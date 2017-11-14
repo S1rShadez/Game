@@ -198,7 +198,7 @@ var selfHeal =  4 + level;
 var selfHealMP = 25;
 */
 var fireball = {
-    name: "fireball",
+    name: "Fireball",
     MPCost: 25
 };
 /*Elf
