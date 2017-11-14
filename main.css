@@ -1,0 +1,55 @@
+body{
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+}
+
+#Grid{
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 150px 1fr 1fr;
+}
+
+#topLeft{
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
+    margin-left: 5%;
+    font-size: 130%;
+    text-align: center;
+}
+
+#righto{
+    grid-row: 1 / 1;
+    grid-column: 4 / 5;
+    margin-right: 5%;
+    font-size: 130%;
+    text-align: center;
+
+}
+
+#inventory{
+    grid-column: 1 / 1;
+    grid-row: 2 / 3;
+    margin-left: 5%;
+    text-align: center;
+    border-bottom-style: dashed;
+    font-size: 130%;
+}
+
+#inventory p, #abilities p{
+    background-color: lightgrey;
+
+
+}
+
+#abilities{
+    grid-row: 2 / 2;
+    grid-column: 4 / 5;
+    margin-right: 5%;
+    font-size: 130%;
+    text-align: center;
+    border-bottom-style: dashed;
+}
