@@ -271,3 +271,8 @@ var halfling = {
     starterBoots: leatherBoots,
     abilities: damageUp
 };
+
+//Mid content
+var battle = "<b>Battle!</b> <p>What are you going to do?!?</p>";
+
+var shop = "<b>Shop!</b> <p>Welcome to the shop!</p>";

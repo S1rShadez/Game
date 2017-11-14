@@ -141,7 +141,9 @@ window.onload = function gameOn(){
     MP.innerHTML = "MP: " + currentMP + "/" + maxMP;
 
     // Actions for the centre of the screen
-    midContent.innerHTML = null;
+    midContent.innerHTML = "<button onclick = \"inventory()\">Inventory</button>";
+
+    
 
 
 }  
