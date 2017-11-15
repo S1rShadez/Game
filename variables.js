@@ -11,6 +11,7 @@ var maxHP;
 var currentMP;
 var maxMP;
 
+    //Variables for making the inventory work
 var inventoryList = [];
 var inventoryText = "";
 

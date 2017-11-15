@@ -164,6 +164,11 @@ window.onload = function gameOn(){
         midContent.innerHTML = inventoryText;
     };
     
+    function inventoryRemove(i){
+        inventoryList.splice(i,1);
+        
+    }
+    
     
     
     midContent.innerHTML = "<button id=\"openInventory\">Inventory</button>";
