@@ -149,7 +149,7 @@ window.onload = function gameOn(){
     function inventory(){
         inventoryText = "<b>Inventory!</b>";
         for(x = 0; x <= inventoryList.length - 1; x++){
-            console.log(inventoryList[x].name);
+            console.log(inventoryList);
             if(inventoryList[x].name === "Empty"){
                 console.log("Tihi, easteregg <3")
             }
@@ -157,16 +157,19 @@ window.onload = function gameOn(){
                 console.log("Tihi, easteregg <3")
             }
             else{
-               inventoryText += "<p>" + inventoryList[x].name + "</p>"; 
+                
+               inventoryText += "<p>" + inventoryList[x].name + "</p> " + "<button id=\"removeItem\" value=\"" + x + "\">Delete item</button>";
+                
             }
                
             }
         midContent.innerHTML = inventoryText;
     };
     
-    function inventoryRemove(i){
-        inventoryList.splice(i,1);
-        
+    function inventoryRemove(){
+        var number = removeItem.value;
+        inventoryList.splice(number,1);
+        inventory;
     }
     
     
@@ -174,6 +177,7 @@ window.onload = function gameOn(){
     midContent.innerHTML = "<button id=\"openInventory\">Inventory</button>";
     
     openInventory.addEventListener("click", inventory);
+    removeItem.addEventListener("click", inventoryRemove);
 
     
 
