@@ -111,7 +111,15 @@ window.onload = function gameOn(){
     currentShirt = race.starterShirt;
     currentPants = race.starterPants;
     currentBoots = race.starterBoots;
-    inventoryList.push(currentWeapon, currentHat, currentShirt, currentPants, currentBoots);
+    
+    inventoryAdd(currentWeapon);
+    inventoryAdd(currentHat);
+    inventoryAdd(currentShirt);
+    inventoryAdd(currentPants);
+    inventoryAdd(currentBoots);
+    
+    
+    //inventoryList.push(currentWeapon, currentHat, currentShirt, currentPants, currentBoots);
     
     
     //Sets HP and MP based on race
@@ -169,7 +177,11 @@ window.onload = function gameOn(){
         
     }
     
-    
+    function inventoryAdd(i){
+        if (i != empty && i != undefined){
+            inventoryList.push(i);
+        }
+    };
     
     midContent.innerHTML = "<button id=\"openInventory\">Inventory</button>";
     
