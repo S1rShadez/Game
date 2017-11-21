@@ -1,5 +1,44 @@
 //Tekstbasert spill
 
+    function inventory(){
+        var buttonId;
+        inventoryText = "<b>Inventory!</b>";
+        for(x = 0; x <= inventoryList.length - 1; x++){
+            
+            if(inventoryList[x].name === "Empty"){
+                console.log("Tihi, easteregg <3")
+            }
+            else if(inventoryList[x].name === undefined){
+                console.log("Tihi, easteregg <3")
+            }
+            else{
+                
+               inventoryText += "<p>" + inventoryList[x].name + "</p> " + "<button" + " onclick=\"inventoryRemove(" + x + ")\"" + ">Delete item</button>";
+                buttonId = "removeItem" + x;
+                
+                //document.getElementById(buttonId).addEventListener("click", inventoryRemove);
+                
+            }
+              
+            }
+        midContent.innerHTML = inventoryText;
+        
+    };
+    
+    function inventoryRemove(number){
+       // var number = parseInt(removeItem.value);
+        //console.log(removeItem.value);
+        inventoryList.splice(number,1);
+        inventory();
+    }
+    
+    function inventoryAdd(i){
+        if (i != empty && i != undefined){
+            inventoryList.push(i);
+        }
+    };
+    
+
 window.onload = function gameOn(){
 
 
@@ -153,42 +192,6 @@ window.onload = function gameOn(){
     // Actions for the centre of the screen
     
     
-    
-    function inventory(){
-        inventoryText = "<b>Inventory!</b>";
-        for(x = 0; x <= inventoryList.length - 1; x++){
-            
-            if(inventoryList[x].name === "Empty"){
-                console.log("Tihi, easteregg <3")
-            }
-            else if(inventoryList[x].name === undefined){
-                console.log("Tihi, easteregg <3")
-            }
-            else{
-                
-               inventoryText += "<p>" + inventoryList[x].name + "</p> " + "<button id=\"removeItem\"  value=\"" + x + "\">Delete item</button>";
-                 
-                
-            }
-              
-            }
-        midContent.innerHTML = inventoryText;
-        document.getElementById("removeItem").addEventListener("click", inventoryRemove);
-        
-    };
-    
-    function inventoryRemove(){
-        var number = parseInt(removeItem.value);
-        console.log(removeItem.value);
-        inventoryList.splice(number,1);
-        inventory();
-    }
-    
-    function inventoryAdd(i){
-        if (i != empty && i != undefined){
-            inventoryList.push(i);
-        }
-    };
     
     midContent.innerHTML = "<button id=\"openInventory\">Inventory</button>";
     
