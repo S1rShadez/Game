@@ -1,17 +1,17 @@
 //Original code   Arthur
 //changes by Simen
 
-    //Level
+//Level
 var level = 1;
 
-    //HP and MP
+//HP and MP
 var currentHP;
 var maxHP;
 
 var currentMP;
 var maxMP;
 
-    //Variables for making the inventory work
+//Variables for making the inventory work
 var inventoryList = [];
 var inventoryText = "";
 
@@ -31,7 +31,7 @@ var currentPants = empty;
 var currentBoots = empty;
 
 
- /*Weapon template, COPY THIS!
+/*Weapon template, COPY THIS!
 
 var  = {
     name: "",
@@ -40,7 +40,7 @@ var  = {
 };
 */
 
-    //starter weapons
+//starter weapons
 
 //Human starter weapon
 var kitchenKnife = {
@@ -70,7 +70,7 @@ var woodenClub = {
     DMG: 3
 };
 
-    //Other wepaons
+//Other wepaons
 var butcherKnife = {
     name: "Buther knife",
     type: "knife",
@@ -95,7 +95,7 @@ var stoneClub = {
     DMG: 5
 };
 
-    //Hats
+//Hats
 /*Hat template COPY THIS!
 
 var = {
@@ -115,7 +115,7 @@ var leatherHood = {
     name: "Leather hood"
 };
 
-    //Shirts
+//Shirts
 
 /*Shirt template COPY THIS!
 
@@ -145,7 +145,7 @@ var darkLeatherShirt = {
     type: "shirt"
 };
 
-    //Pants
+//Pants
 
 /* Pants template
 var = {
@@ -169,7 +169,7 @@ var darkLeatherPants = {
     type: "pants"
 };
 
-    //Boots
+//Boots
 
 /* Boots template
 var = {
@@ -189,7 +189,7 @@ var clothBoots = {
 };
 
 
-    //Abilities
+//Abilities
 
 var selfHeal = {
     name: "Self heal",
@@ -226,9 +226,9 @@ var berserk = {
 var berserk = currentWeapon.DMG * 2 + level;
 var berserkMP = 25;
 */
-    
 
-    //Races
+
+//Races
 var race;
 
 var human = {

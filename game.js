@@ -1,43 +1,45 @@
 //Tekstbasert spill
 
-    function inventory(){
-        var buttonId;
-        inventoryText = "<b>Inventory!</b>";
-        for(x = 0; x <= inventoryList.length - 1; x++){
-            
-            if(inventoryList[x].name === "Empty"){
-                console.log("Tihi, easteregg <3")
-            }
-            else if(inventoryList[x].name === undefined){
-                console.log("Tihi, easteregg <3")
-            }
-            else{
-                
-               inventoryText += "<p>" + inventoryList[x].name + "</p> " + "<button" + " onclick=\"inventoryRemove(" + x + ")\"" + ">Delete item</button>";
-                buttonId = "removeItem" + x;
-                
-                //document.getElementById(buttonId).addEventListener("click", inventoryRemove);
-                
-            }
-              
-            }
-        midContent.innerHTML = inventoryText;
-        
-    };
-    
-    function inventoryRemove(number){
-       // var number = parseInt(removeItem.value);
-        //console.log(removeItem.value);
-        inventoryList.splice(number,1);
-        inventory();
-    }
-    
-    function inventoryAdd(i){
-        if (i != empty && i != undefined){
-            inventoryList.push(i);
+
+//Creates the inventory in midContent when used
+function inventory(){
+    var buttonId;
+    inventoryText = "<b>Inventory!</b>";
+    for(x = 0; x <= inventoryList.length - 1; x++){
+
+        if(inventoryList[x].name === "Empty"){
+            console.log("Tihi, easteregg <3")
         }
-    };
-    
+        else if(inventoryList[x].name === undefined){
+            console.log("Tihi, easteregg <3")
+        }
+        else{
+
+            inventoryText += "<p>" + inventoryList[x].name + "</p> " + "<button" + " onclick=\"inventoryRemove(" + x + ")\"" + ">Delete item</button>";
+            buttonId = "removeItem" + x;
+
+        }
+
+    }
+    midContent.innerHTML = inventoryText;
+
+};
+
+//Removes an item from the inventory
+function inventoryRemove(number){
+    // var number = parseInt(removeItem.value);
+    //console.log(removeItem.value);
+    inventoryList.splice(number,1);
+    inventory();
+}
+
+//Adds an item to the inventory
+function inventoryAdd(i){
+    if (i != empty && i != undefined){
+        inventoryList.push(i);
+    }
+};
+
 
 window.onload = function gameOn(){
 
@@ -150,17 +152,14 @@ window.onload = function gameOn(){
     currentShirt = race.starterShirt;
     currentPants = race.starterPants;
     currentBoots = race.starterBoots;
-    
+
     inventoryAdd(currentWeapon);
     inventoryAdd(currentHat);
     inventoryAdd(currentShirt);
     inventoryAdd(currentPants);
     inventoryAdd(currentBoots);
-    
-    
-    //inventoryList.push(currentWeapon, currentHat, currentShirt, currentPants, currentBoots);
-    
-    
+
+
     //Sets HP and MP based on race
     maxHP = race.HPBase + level;
     maxMP = race.MPBase + level;
@@ -190,17 +189,14 @@ window.onload = function gameOn(){
     MP.innerHTML = "MP: " + currentMP + "/" + maxMP;
 
     // Actions for the centre of the screen
-    
-    
-    
     midContent.innerHTML = "<button id=\"openInventory\">Inventory</button>";
-    
-    openInventory.addEventListener("click", inventory);
-    
-    
-    
 
-    
+    openInventory.addEventListener("click", inventory);
+
+
+
+
+
 
 
 }  
