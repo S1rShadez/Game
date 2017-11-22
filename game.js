@@ -193,10 +193,4 @@ window.onload = function gameOn(){
 
     openInventory.addEventListener("click", inventory);
 
-
-
-
-
-
-
 }  
