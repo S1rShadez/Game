@@ -1,9 +1,8 @@
 //Tekstbasert spill
 
 
-//Creates the inventory in midContent when used
+//Creates the inventory with delete buttons in midContent when used 
 function inventory(){
-    var buttonId;
     inventoryText = "<b>Inventory!</b>";
     for(x = 0; x <= inventoryList.length - 1; x++){
 
@@ -15,9 +14,8 @@ function inventory(){
         }
         else{
 
-            inventoryText += "<p>" + inventoryList[x].name + "</p> " + "<button" + " onclick=\"inventoryRemove(" + x + ")\"" + ">Delete item</button>";
-            buttonId = "removeItem" + x;
-
+            inventoryText += "<p>" + inventoryList[x].name + "</p> "
+                + "<button" + " onclick=\"inventoryRemove(" + x + ")\"" + ">Delete item</button>";
         }
 
     }
