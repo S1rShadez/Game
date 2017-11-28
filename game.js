@@ -32,9 +32,11 @@ function inventoryRemove(number){
 }
 
 //Adds an item to the inventory
-function inventoryAdd(i){
-    if (i != empty && i != undefined){
-        inventoryList.push(i);
+function inventoryAdd(){
+    for (i = 0; i < arguments.length; i++) {
+        if (arguments[i] != empty && arguments[i] != undefined){
+            inventoryList.push(arguments[i]);
+        }
     }
 };
 
@@ -151,11 +153,7 @@ window.onload = function gameOn(){
     currentPants = race.starterPants;
     currentBoots = race.starterBoots;
 
-    inventoryAdd(currentWeapon);
-    inventoryAdd(currentHat);
-    inventoryAdd(currentShirt);
-    inventoryAdd(currentPants);
-    inventoryAdd(currentBoots);
+    inventoryAdd(currentWeapon, currentHat, currentShirt, currentPants, currentBoots);
 
 
     //Sets HP and MP based on race
