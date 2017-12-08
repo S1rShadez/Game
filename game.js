@@ -1,63 +1,21 @@
 //Tekstbasert spill
 
 
-//Creates the inventory with delete buttons in midContent when used 
-function inventory(){
-    inventoryText = "<b>Inventory!</b>";
-    for(x = 0; x <= inventoryList.length - 1; x++){
-
-        if(inventoryList[x].name === "Empty"){
-            console.log("Tihi, easteregg <3")
-        }
-        else if(inventoryList[x].name === undefined){
-            console.log("Tihi, easteregg <3")
-        }
-        else{
-
-            inventoryText += "<p>" + inventoryList[x].name + "</p> "
-                + "<button" + " onclick=\"inventoryRemove(" + x + ")\"" + ">Delete item</button>";
-        }
-
-    }
-    midContent.innerHTML = inventoryText;
-
-};
-
-//Removes an item from the inventory
-function inventoryRemove(number){
-    // var number = parseInt(removeItem.value);
-    //console.log(removeItem.value);
-    inventoryList.splice(number,1);
-    inventory();
-}
-
-//Adds an item to the inventory
-function inventoryAdd(){
-    for (i = 0; i < arguments.length; i++) {
-        if (arguments[i] != empty && arguments[i] != undefined){
-            inventoryList.push(arguments[i]);
-        }
-    }
-};
-
-
-window.onload = function gameOn(){
-
-
+window.onload = function gameOn() {
 
 
     //Name
     var navn = prompt("Choose your charactername");
-    for(var x = 1; x != 0; x++){
+    for (var x = 1; x != 0; x++) {
         if(navn === ""){
             alert("Please choose a name!");
             navn = prompt("Choose your charactername");
         }
-        else if(navn === undefined){
+        else if (navn === undefined) {
             alert("Please choose a name!");
             navn = prompt("Choose your charactername");
         }
-        else{
+        else {
             break;
         }
     }
@@ -67,23 +25,23 @@ window.onload = function gameOn(){
 
     //Sex
     var kjønnsTest = prompt("Choose between Male and Female");
-    for(var x = 1; x != 0; x++){
-        if(kjønnsTest === undefined){
+    for (var x = 1; x != 0; x++) {
+        if (kjønnsTest === undefined){
             alert("Please choose a sex!");
             kjønnsTest = prompt("Choose between male and female");
         }
-        else{
+        else {
             break;
         }
     }
     var kjønn = kjønnsTest.toLowerCase();
-    for(var x = 1; x != 0; x++){
-        if(kjønn != "male" && kjønn != "female"){
+    for (var x = 1; x != 0; x++) {
+        if (kjønn != "male" && kjønn != "female") {
             alert("Please choose a valid sex...");
             kjønnsTest = prompt("Choose between male and female");
             kjønn = kjønnsTest.toLowerCase();
         }
-        else{
+        else {
             break;
         }
     }
@@ -92,22 +50,22 @@ window.onload = function gameOn(){
 
     //Race
     var raseTest = prompt("Choose between: Human, Elf, Orc or Halfling");
-    for(var x = 1; x != 0; x++){
+    for (var x = 1; x != 0; x++) {
         if(raseTest === undefined){
             alert("Please choose a valid race!");
             raseTest = prompt("Choose between: Human, Elf, Orc or Halfling");
         }
-        else{
+        else {
             break;
         }
     }
 
     var rase = raseTest.toLowerCase();
-    for(var x = 1; x != 0; x++){
+    for (var x = 1; x != 0; x++) {
         if(rase === "human" || rase === "elf" || rase === "orc" || rase === "halfling"){
             break;
         }
-        else{
+        else {
             alert("Please choose a valid race!");
             raseTest = prompt("Choose between: Human, Elf, Orc or Halfling");
             rase = raseTest.toLowerCase();
@@ -190,3 +148,43 @@ window.onload = function gameOn(){
     openInventory.addEventListener("click", inventory);
 
 }  
+
+
+//Creates the inventory with delete buttons in midContent when used 
+function inventory() {
+    inventoryText = "<b>Inventory!</b>";
+    for (x = 0; x <= inventoryList.length - 1; x++) {
+
+        if (inventoryList[x].name === "Empty") {
+            console.log("Tihi, easteregg <3")
+        }
+        else if (inventoryList[x].name === undefined) {
+            console.log("Tihi, easteregg <3")
+        }
+        else {
+
+            inventoryText += "<p>" + inventoryList[x].name + "</p> "
+                + "<button" + " onclick=\"inventoryRemove(" + x + ")\"" + ">Delete item</button>";
+        }
+
+    }
+    midContent.innerHTML = inventoryText;
+
+};
+
+//Removes an item from the inventory
+function inventoryRemove(number) {
+    // var number = parseInt(removeItem.value);
+    //console.log(removeItem.value);
+    inventoryList.splice(number,1);
+    inventory();
+}
+
+//Adds an item to the inventory
+function inventoryAdd() {
+    for (i = 0; i < arguments.length; i++) {
+        if (arguments[i] != empty && arguments[i] != undefined){
+            inventoryList.push(arguments[i]);
+        }
+    }
+};
